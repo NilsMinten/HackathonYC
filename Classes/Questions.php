@@ -10,7 +10,7 @@ final class Questions
 
     public function __construct()
     {
-        $this->database = new Database('hackathon')
+        $this->database = new Database('hackathon');
     }
 
     public function addAnswer(string $question, string $answer, string $userEmail) {
