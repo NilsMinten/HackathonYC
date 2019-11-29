@@ -13,8 +13,12 @@ final class Questions
         $this->database = new Database('hackathon');
     }
 
-    public function addAnswer(string $question, string $answer, string $userEmail) {
-        $sql = sprintf('INSERT INTO `answers`(`Question`, `Answer`, `User`) VALUES (\'%s\', \'%s\', \'%s\');', $question, $answer, $userEmail);
+    public function addAnswer(string $question, string $answer, string $userEmail, string $class) {
+        $sql = sprintf('INSERT INTO `answers`(`Question`, `Answer`, `User`, `class`) VALUES (\'%s\', \'%s\', \'%s\', \'%s\');',
+            $question,
+            $answer,
+            $userEmail,
+            $class);
         return $this->database->query($sql);
     }
 }
