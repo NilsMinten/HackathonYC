@@ -13,19 +13,38 @@
     </div>
     <div class="column">
       <form action="/action_page.php">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-        <label for="country">Country</label>
+        <label for="fname">Naam</label>
+        <input type="text" id="fname" name="firstname" placeholder="Voer je naam in..">
+        
+        <label for="country">Welk vak heb je gevolgd?</label>
         <select id="country" name="country">
-          <option value="australia">Australia</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
+          <option value="australia">OOP</option>
+          <option value="canada">Python</option>
+          <option value="usa">React</option>
+          <option value="usa">Web Ontwikkeling</option>
         </select>
-        <label for="subject">Subject</label>
+
+        <label for="country">Stof module beantwoordt aan verwachtingen</label>
+        <select id="country" name="country">
+          <option value="australia">Zeer Eens</option>
+          <option value="canada">Eens</option>
+          <option value="usa">Weet ik niet</option>
+          <option value="usa">Oneens</option>
+          <option value="usa">Zeer Oneens</option>
+        </select>
+
+        <label for="country">Inhoudelijke kwaliteit	van	de lesstof</label>
+        <select id="country" name="country">
+          <option value="australia">Zeer Goed</option>
+          <option value="canada">Goed</option>
+          <option value="usa">Gemiddeld</option>
+          <option value="usa">Slecht</option>
+          <option value="usa">Zeer Slecht</option>
+        </select>
+
+        <label for="subject">Overige opmerkingen</label>	
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Verder">
       </form>
     </div>
   </div>
