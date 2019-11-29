@@ -3,7 +3,7 @@
 
     $question = new Questions();
 
-    $question->addAnswer('Is this working ?', 'Yes', 'nils@minten.dev');
+    $question->addAnswer('Is this working ?', 'Yes', 'nils@minten.dev', 'French');
 ?>
 <!DOCTYPE html>
 <html lang="en">
