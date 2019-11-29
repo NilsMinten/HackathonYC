@@ -28,14 +28,14 @@ $functions = new AdminFunctions();
         </div>
     </nav>
     <?php
-        if ($_GET['function'] === 'users' || !$_GET['function']) {
+        if ($_GET['function'] === 'users') {
             $users = $functions->getUsers();
             ?>
             <ul class="list-group">
                 <?php
                 foreach ($users as $user) {
                 ?>
-                    <a href="?function=answer&user=<?php echo $user ?>"><li class="list-group-item"><?php echo $user ?></li></a>
+                    <a href="?function=class&user=<?php echo $user ?>"><li class="list-group-item"><?php echo $user ?></li></a>
                 <?php
             }
             ?>
@@ -43,11 +43,44 @@ $functions = new AdminFunctions();
             <?php
         }
 
-        if ($_GET['function'] === 'answer')  {
-            $asnwers = $functions->getUserAnswers($_GET['user']);
+        if ($_GET['function'] === 'class')  {
+            $classes = $functions->getUserClasses($_GET['user']);
             ?>
+            <ul class="list-group 2">
+                <?php
+                foreach ($classes as $class) {
+                    ?>
+                    <a href="?function=answer&user=<?php echo $_GET['user'] ?>&class=<?php echo $class ?>"><li class="list-group-item"><?php echo $class ?></li></a>
+                    <?php
+                }
+                ?>
+            </ul>
+            <?php
+        }
 
-
+        if ($_GET['function'] === 'answer')  {
+            $answers = $functions->getUserAnswers($_GET['user'], $_GET['class']);
+            ?>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>Answer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php
+                foreach ($answers as $answer) {
+                    ?>
+                        <tr>
+                            <td><?php echo $answer['question'] ?></td>
+                            <td><?php echo $answer['answer'] ?></td>
+                        </tr>
+                    <?php
+                }
+                ?>
+                </tbody>
+            </table>
             <?php
         }
     ?>
