@@ -6,8 +6,8 @@ declare(strict_types=1);
  */
 class Database {
     private $servername = "localhost";
-    private $username = "hackathon";
-    private $password = "ESgyAI5vgbMVzf7";
+    private $username = "root";
+    private $password = "";
     private $database;
     public $conn;
 
