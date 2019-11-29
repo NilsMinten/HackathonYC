@@ -1,3 +1,27 @@
+<?php
+include ('Classes/Questions.php');
+
+if (isset($_POST)) {
+    $question = new Questions();
+    foreach ($_POST as $index=> $value) {
+        switch ($index) {
+            case 'onderwerpen':
+                $question->addAnswer('Behandelt de juiste onderwerpen?', $value, 'nils@minten.dev', 'docent');
+                break;
+            case 'lesmateriaal':
+                $question->addAnswer('Voldoende les materiaal?', $value, 'nils@minten.dev', 'docent');
+                break;
+            case 'helder':
+                $question->addAnswer('Lessen zijn heel helder?', $value, 'nils@minten.dev', 'docent');
+                break;
+            case 'docentis':
+                $question->addAnswer('Docent is?', $value, 'nils@minten.dev', 'docent');
+                break;
+        }
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +42,7 @@
     </div>
     <div class="row">
         <div class="column">
-            <form action="/action_page.php">
+            <form action="#" method="POST">
                 <label for="onderwerpen">Behandelt de juiste onderwerpen?</label>
                 <select name="onderwerpen">
                     <option>Ja</option>
@@ -31,14 +55,14 @@
                     <option>Misschien</option>
                     <option>Nee</option>
                 </select>
-                <label for="onderwerpen">Lessen zijn heel helder?</label>
-                <select name="onderwerpen">
+                <label for="helder">Lessen zijn heel helder?</label>
+                <select name="helder">
                     <option>Ja</option>
                     <option>Misschien</option>
                     <option>Nee</option>
                 </select>
-                <label for="onderwerpen">Docent is </label>
-                <select name="onderwerpen">
+                <label for="docentis">Docent is </label>
+                <select name="docentis">
                     <option>Prachtig</option>
                     <option>Mooi</option>
                     <option>Wel oke</option>
