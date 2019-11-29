@@ -21,8 +21,7 @@
 <body>
 <div class="container">
     <div style="text-align:center">
-        <h2>Docent</h2>
-        <p>Wie is je docent eigenlijk</p>
+        <h2>Wie ben jij?</h2>
     </div>
     <div class="row">
         <div class="column">
