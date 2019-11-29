@@ -16,7 +16,7 @@ final class AdminFunctions
 
     public function getUsers() {
         $sql = 'SELECT DISTINCT(`user`) FROM `answers`;';
-        $result = $this->database->query($slq);
+        $result = $this->database->query($sql);
 
         $resultArray = [];
         if ($result->num_rows >= 1) {
@@ -29,6 +29,6 @@ final class AdminFunctions
     }
 
     public function getUserAnswers(string $user) {
-        $sql = 'SELECT * FROM'
+        $sql = sprintf("SELECT * FROM `user` WHERE `user` = '%s'", $user);
     }
 }
