@@ -14,7 +14,7 @@ final class Questions
     }
 
     public function addAnswer(string $question, string $answer, string $userEmail) {
-        $sql = sprintf('INSERT INTO `answers`(`Question`, `Answer`, `User`) VALUES (\'%s\', \'%s\', \'%s\')', $question, $answer, $userEmail);
-        $this->database->query($sql);
+        $sql = sprintf('INSERT INTO `answers`(`Question`, `Answer`, `User`) VALUES (\'%s\', \'%s\', \'%s\');', $question, $answer, $userEmail);
+        return $this->database->query($sql);
     }
 }

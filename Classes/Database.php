@@ -6,7 +6,7 @@ declare(strict_types=1);
  */
 class Database {
     private $servername = "localhost";
-    private $username = "api";
+    private $username = "hackathon";
     private $password = "ESgyAI5vgbMVzf7";
     private $database;
     public $conn;

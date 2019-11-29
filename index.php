@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<?php
+    include ('Classes/Questions.php');
 
-</body>
-</html>
+    $question = new Questions();
+
+    $question->addAnswer('Is this working ?', 'Yes', 'nils@minten.dev');
+?>
