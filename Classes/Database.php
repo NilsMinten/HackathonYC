@@ -11,17 +11,13 @@ class Database {
     private $database;
     public $conn;
 
-    function __construct($database)
+    function __construct(string $database)
     {
         $this->database = $database;
         $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->database);
     }
 
-    function getDatabase() {
-        return $this->database;
-    }
-
-    function query ($sql) {
+    function query (string $sql) {
         return $this->conn->query($sql);
     }
 
