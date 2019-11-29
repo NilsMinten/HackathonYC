@@ -14,7 +14,7 @@ final class Questions
     }
 
     public function addAnswer(string $question, string $answer, string $userEmail, string $class) {
-        $sql = sprintf('INSERT INTO `answers`(`Question`, `Answer`, `User`, `class`) VALUES (\'%s\', \'%s\', \'%s\', \'%s\');',
+        $sql = sprintf('INSERT INTO `answers`(`Question`, `Answer`, `User`, `Class`) VALUES (\'%s\', \'%s\', \'%s\', \'%s\');',
             $question,
             $answer,
             $userEmail,
